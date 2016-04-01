@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #000000;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #29a329;
+}
+
+.active {
+    background-color: #29a329;
+}
+</style>
+</head>
+<body>
+
+<ul>
+  <li><a href="ram.html" target="display">RAM Details</a></li>
+  <li><a href="upss.html" target="display">UPS Details</a></li>
+  <li><a href="config.html" target="display">LAB Details</a></li>
+  <ul style="float:right;list-style-type:none;">
+    <li><a href="login.html">Logout</a></li>
+  </ul>
+</ul>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE HTML
+PUBLIC:"-//W3C/DTD XHTML 1.0 STRICT//EN"
+"http://www.w3.org/trl/xhtml/DTD/xhtml/-fraeset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>DISPLAY DETAILS</title>
+</head>
+<body>
+<?php
+ include_once("db.php");
+$sql_statemanet = "select adate,cdate from ups";
+$rec_select = mysql_query( $sql_statemanet,$con);
+ 
+if(! $rec_select )
+ 
+{
+ 
+  die('Could not retrieve data: ' . mysql_error());
+ 
+}
+ 
+//Displaying fetched records to HTML table
+ 
+echo "<table border='1'>";
+ 
+echo "<tr> <th>NAME</th> <th>ACTUAL DATE</th> <th>UPDATED DATE</th></tr>";
+ 
+// Using mysql_fetch_array() to get the next row until end of table rows
+ 
+while($row = mysql_fetch_array( $rec_select )) {
+ 
+                // Print out the contents of each row into a table
+ 
+                echo "<tr><td>";
+ 
+                echo $row['adate'];
+ 
+                echo "</td><td>";
+ 
+                echo $row['cdate'];
+ 
+                echo "</td></tr>";
+
+ 
+}
+ 
+mysql_close($con);
+?>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html
+	PUBLIC "-//w3c/DTD XHTML 1.0 STRICT//EN"
+	"http://www.w3.or/1999/xhtml1-strict.dtd">
+	<html>
+		<head><h1>CREATING NEW SYSTEM DETAILS</h1><title>onclick</title>
+		</head>
+		<body bgcolor="cyan">
+		<body>
+			<label>
+				<b>Name of the lab:</b><i id="i1"></i><br>
+				<b>Date Of purchase:</b><i id="i2"></i><br>
+				<b>Product id:</b><i id="i3"></i><br>
+				
+				
+			</label>
+			<script type="text/javascript">
+				var name=window.prompt("Enter name of lab:");
+				var dob=window.prompt("Enter date of purchase:");
+				var em=window.prompt("Enter purchase id:");
+		
+				document.getElementById("i1").innerHTML=name;
+				document.getElementById("i2").innerHTML=dob;
+				document.getElementById("i3").innerHTML=em;
+			
+				
+			</script>
+		</body>
+	</html>
